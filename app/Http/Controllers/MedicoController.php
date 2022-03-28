@@ -90,7 +90,7 @@ class MedicoController extends Controller
         //
         $medicoData=request()->except(['_token', '_method']);
         Medico::where('id', '=', $id)->update($medicoData);
-        return redirent('medico');
+        return redirect("medico");
     }
 
     /**
@@ -108,3 +108,4 @@ class MedicoController extends Controller
         return redirect('medico');
     }
 }
+
